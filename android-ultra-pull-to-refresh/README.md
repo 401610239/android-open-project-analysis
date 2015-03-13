@@ -1,16 +1,17 @@
-${项目名} 源码解析
+android-Ultra-Pull-To-Refresh 源码解析
 ====================================
-> 本文为 [Android 开源项目源码解析](https://github.com/android-cn/android-open-project-analysis) 中 ${项目名} 部分  
-> 项目地址：[${项目名}](${项目原地址})，分析的版本：[${commitId}.substring(0, 7)](${项目原地址}/commit/${commitId} "Commit id is ${commitId}")，Demo 地址：[${项目名} Demo](https://github.com/android-cn/android-open-project-demo/tree/master/${项目 Demo 地址})    
-> 分析者：[${分析者}](${分析者 Github 地址})，校对者：[${校对者}](${校对者 Github 地址})，校对状态：未完成   
-
-`复制一份到自己的项目文件夹下，然后根据自己项目替换掉 ${} 内容，删掉本句内容。`  
+> 本文为 [Android 开源项目源码解析](https://github.com/android-cn/android-open-project-analysis) 中 android-Ultra-Pull-To-Refresh 部分  
+> 项目地址：[android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)，分析的版本：[508c632](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh/tree/508c63266de51ad8c010ac9912f7592b2f2da8fc)，Demo 地址：[android-Ultra-Pull-To-Refresh Demo](https://github.com/android-cn/android-open-project-demo/tree/master/android-ultra-pull-to-refresh-demo)    
+> 分析者：[Grumoon](https://github.com/grumoon)，校对者：，校对状态：未完成   
+ 
 
 ###1. 功能介绍  
-功能介绍，包括功能或优点等  
+下拉刷新，几乎是每个Android应用都会需要的功能。android-Ultra-Pull-To-Refresh（以下简称 UltraPTR ）便是一个强大的Andriod下拉刷新框架。    
+主要特点：  
+(1).继承于 ViewGroup，Content 可以包含任何View。  
+(2).简洁完善的 Header 抽象，方便进行拓展，构建符合需求的头部。
+> 对比 [Android-PullToRefresh](https://github.com/chrisbanes/Android-PullToRefresh) 项目，UltraPTR 没有实现加载更多的功能，但我认为下拉刷新和加载更多不是同一层次的功能，下拉刷新是更广意义上的使用需求，而加载更多的功能应该交由 Content 自己去实现。这应该是和Google官方推出 SwipeRefreshLayout 是相同的设计思路，但对比 SwipeRefreshLayout，UltraPTR 更灵活，更容易拓展。
 
-**完成时间**  
-- `一天内`完成  
 
 ###2. 详细设计
 ###2.1 类详细介绍

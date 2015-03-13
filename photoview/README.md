@@ -1,6 +1,6 @@
-PhotoView 实现原理解析
+PhotoView 源码解析
 ====================================
-> 本文为 [Android 开源项目实现原理解析](https://github.com/android-cn/android-open-project-analysis) 中 PhotoView 部分  
+> 本文为 [Android 开源项目源码解析](https://github.com/android-cn/android-open-project-analysis) 中 PhotoView 部分  
 > 项目地址：[PhotoView](https://github.com/chrisbanes/PhotoView)，分析的版本：[48427bf](https://github.com/chrisbanes/PhotoView/commit/48427bff9bb1a408cfebf6697aa019c0788ded76)，Demo 地址：[PhotoView-demo](https://github.com/android-cn/android-open-project-demo/tree/master/photoview-demo)    
 > 分析者：[dkmeteor](https://github.com/dkmeteor)，校对者：[cpacm](https://github.com/cpacm)，校对状态：完成   
 
@@ -37,7 +37,7 @@ PhotoView这个库实际上比较简单,关键点其实就是Touch事件处理�
 ###3. 流程图
 Touch及手势事件判定及传递流程：
 
-![流程图](images/flow.jpg)
+![流程图](images/flow.png)
 
 如图，从架构上看，干净利落的将事件层层分离，交由不同的Detector处理，最后再将处理结果回调给PhtotViewAttacher中的Matrix去实现图形变换效果。
 
